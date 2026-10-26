@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Module 10</title>
+</head>
+<body>
+
+  <h1>Module 10</h1>
+  <p>27 October 2026</p>
+
+  <p>This interactive multiplot compares greenhouse gas emissions per person and population in Brazil, China and India from 2000 to 2023.</p>
+
+  <h2>Interactive visualisation</h2>
+  <iframe src="figures/module10_multiplot.html" title="Interactive emissions trends and population scatter plot" style="width:100%;height:750px;border:0;"></iframe>
+  <p>Figure 1. Emissions trends and population–emissions comparison. The selected scatter plot year is 2023. Data from Jones et al. (2025), Our World in Data (2024, n.d.) and United Nations (2024).</p>
+
+  <h2>Exercise summary</h2>
+  <p>I reused the Module 7 dataset for Brazil, China and India from 2000 to 2023, checked for missing values and duplicate records, and converted the population data into millions. Using R and Plotly, I combined the emissions trend chart with the new population–emissions scatter plot. Both panels use consistent country colours and emissions scales. The hover label shows the values, the legend controls the visibility of the countries in both panels, and the year slider updates the scatter plot. In 2023, India had the largest population and the lowest per capita emissions among the three countries, while Brazil showed the opposite pattern.</p>
+
+  <h2>Data Visualisation Data Card</h2>
+  <table border="1" cellpadding="8" cellspacing="0">
+    <tr>
+      <th scope="row">Title</th>
+      <td>
+        <p>Population and greenhouse gas emissions in Brazil, China and India, 2000–2023</p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Summary</th>
+      <td>
+        <p>The interactive multiplot combines the emissions trend chart and the new population–emissions scatter plot. The line chart shows the full time period, and the year slider is used to select the year displayed in the scatter plot. The shared legend controls the visibility of the countries in the two panels.</p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Data Sources</th>
+      <td>
+        <p>Jones, M. W., Peters, G. P., Gasser, T., Andrew, R. M., Schwingshackl, C., Gütschow, J., Houghton, R. A., Friedlingstein, P., Pongratz, J., &amp; Le Quéré, C. (2025). National contributions to climate change due to historical emissions of carbon dioxide, methane and nitrous oxide (Version 2025.1) [Data set]. Zenodo. <a href="https://doi.org/10.5281/zenodo.16640595">https://doi.org/10.5281/zenodo.16640595</a></p>
+        <p>Our World in Data. (n.d.). Per capita greenhouse gas emissions including land use [Interactive data visualization]. <a href="https://ourworldindata.org/grapher/per-capita-ghg-emissions">https://ourworldindata.org/grapher/per-capita-ghg-emissions</a></p>
+        <p>Our World in Data. (2024). Population [Data set]. <a href="https://ourworldindata.org/grapher/population">https://ourworldindata.org/grapher/population</a></p>
+        <p>United Nations, Department of Economic and Social Affairs, Population Division. (2024). World population prospects 2024 [Data set]. <a href="https://population.un.org/wpp/">https://population.un.org/wpp/</a></p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Mapping</th>
+      <td>
+        <p>Panel A: The horizontal axis shows the year (2000–2023), and the vertical axis shows the greenhouse gas emissions in carbon dioxide equivalents per person calculated according to the 100-year warming timescale (unit: tonnes). The emissions include land use emissions. The data comes from Jones et al. (2025) and is processed by Our World in Data.</p>
+        <p>Panel B: The horizontal axis represents the population (unit: millions), and the vertical axis represents the same emissions measure. The population data comes from the saved Module 7 dataset, which is sourced from Our World in Data (2024) and the United Nations (2024). Each point represents a country in the selected year.</p>
+        <p>Brazil, China and India are shown in purple, blue and brown in both panels. The trend lines are solid, dashed and dotted respectively. The scatter markers are circles, squares and diamonds respectively. Text labels are used to identify countries in the scatter plot.</p>
+        <p>The slider can select one of the 24 years, only change the scatter plot, and the complete trend chart remains visible. Click on the country in the legend to hide or show the country in the two panels. The hover label shows the year, emissions (rounded to one decimal place), and the population in Panel B (rounded to one decimal place, in millions).</p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Important Notes</th>
+      <td>
+        <p>The saved Module 7 dataset contains 72 observations from three countries from 2000 to 2023. No missing values or duplicate country-year records were found. The population has been converted into millions. The two emissions axes are still fixed between 0 and 25 tonnes per person, and the population axis is fixed between 0 and 1,600 million. Emissions include land use emissions, which are estimates and may need to be revised. National averages conceal differences within countries, and the three-country comparison cannot establish a causal relationship between population and emissions.</p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Access</th>
+      <td>
+        <p>A copy of the complete dataset used in this visualisation is available here: <a href="data/emissions_population_2000_2023.csv" download>Download the data (CSV)</a>.</p>
+      </td>
+    </tr>
+  </table>
+
+  <h2>AI acknowledgement</h2>
+  <p>I used ChatGPT (OpenAI, 2026) to help develop and debug the R code for this interactive multiplot and to draft the portfolio summary and data card using my existing dataset.</p>
+
+  <h2>References</h2>
+  <p>Jones, M. W., Peters, G. P., Gasser, T., Andrew, R. M., Schwingshackl, C., Gütschow, J., Houghton, R. A., Friedlingstein, P., Pongratz, J., &amp; Le Quéré, C. (2025). National contributions to climate change due to historical emissions of carbon dioxide, methane and nitrous oxide (Version 2025.1) [Data set]. Zenodo. <a href="https://doi.org/10.5281/zenodo.16640595">https://doi.org/10.5281/zenodo.16640595</a></p>
+  <p>Our World in Data. (n.d.). Per capita greenhouse gas emissions including land use [Interactive data visualization]. <a href="https://ourworldindata.org/grapher/per-capita-ghg-emissions">https://ourworldindata.org/grapher/per-capita-ghg-emissions</a></p>
+  <p>Our World in Data. (2024). Population [Data set]. <a href="https://ourworldindata.org/grapher/population">https://ourworldindata.org/grapher/population</a></p>
+  <p>United Nations, Department of Economic and Social Affairs, Population Division. (2024). World population prospects 2024 [Data set]. <a href="https://population.un.org/wpp/">https://population.un.org/wpp/</a></p>
+  <p>OpenAI (2026) ChatGPT [Large language model], accessed 27 October 2026. <a href="https://chatgpt.com/">https://chatgpt.com/</a></p>
+
+</body>
+</html>
